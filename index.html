@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Boredom Buster!</title>
+</head>
+<body class="container">
+	<img alt="basset hound lying on a dog bed" src="./images/pexels-dina-nasyrova-3764319.jpg"/>
+	<div>
+		<h1>Boredom Buster!</h1>
+    <div class = "search">
+        <h2>Find an activity to beat your boredom!</h2>
+		<button class="search-btn">Search</button>
+    </div>
+	<div class="result">
+		<div class="errors"></div>
+		<div class="data"></div>
+		<div class="result-container">
+			<p><strong>Activity Name: </strong><span class="activity"></span></p>
+            
+			<p><strong>Accessibility: </strong><span class="accessibility"></span></p>
+            <label for="accessibility">Accessibility Rating</label>
+            <meter id="accessibility" value="" min="0.0" max="1.0"></meter>
+	    	<p><strong>Type: </strong><span class="activity-type"></span></p>
+            <p><strong>Participants: </strong><span class="participants"></span></p>
+            <p><strong>Price: </strong><span class="price"></span></p>
+            <label for="price">Price</label>
+            <meter id="price" value="" min="0" max="1.0"></meter>
+            <p><strong>Link: </strong><span class="activity-link"></span></p>
+		</div>
+		<button class="clear-btn">Clear</button>
+	</div>
+
+    <div id="myData"></div>
+<!--<script>
+	/*fetch('http://www.boredapi.com/api/activity/')
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (data) {
+			appendData(data);
+		})
+		.catch(function (err) {
+			console.log('error: ' + err);
+		});
+	function appendData(data) {
+		var mainContainer = document.getElementById("myData");
+		for (var i = 0; i < data.length; i++) {
+			var div = document.createElement("div");
+			div.innerHTML = 'Activity: ' + data[i].activity;
+			mainContainer.appendChild(div);
+		}
+	}*/
+</script>-->
+
+	<script src="dist/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+img {
+    max-height: 30vh;
+    max-width: 30vw;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100vhvh;
+    width: 100vw;
+    font: normal 500 14pt helvetica, sans-serif;
+}
+
+html {
+    height: 100vh;
+    width: 100vh;
+}
