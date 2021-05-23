@@ -6,6 +6,7 @@ const results = document.querySelector('.result-container');
 const activity = document.querySelector('.activity');
 const accessibility = document.querySelector('.accessibility');
 const type = document.querySelector('.activity-type');
+const participants = document.querySelector('.participants');
 const price = document.querySelector('.price');
 const link = document.querySelector('.activity-link');
 const clearBtn = document.querySelector('.clear-btn');
@@ -25,6 +26,7 @@ const displayActivity = async () => {
 				type.innerText=response.data.type;
 				price.innerText=response.data.price;
 				link.innerText=response.data.link;
+				participants.innerText=response.data.participants;
 
 				if (response.data.price!=null) {
 				document.querySelector("#price").value=response.data.price;
@@ -41,10 +43,21 @@ const displayActivity = async () => {
 
 // handle form submission
 const handleSearch = (e) => {
-	e.preventDefault();}
+	e.preventDefault();
+	mySearch();
+}
 
 const reset = (e) => {
-	e.preventDefault();}
+	e.preventDefault();
+	activity.innerText="";
+	accessibility.innerText="";
+	type.innerText="";
+	price.innerText="";
+	link.innerText="";
+	participants.innerText="";
+	document.querySelector("#price").value=0;
+	document.querySelector("#accessibility").value=0;
+	}
 
 searchBtn.addEventListener('click', (e) => handleSearch(e));
 clearBtn.addEventListener('click', (e) => reset(e));
