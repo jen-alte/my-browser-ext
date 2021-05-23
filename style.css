@@ -10,9 +10,16 @@ body {
     height: 100vhvh;
     width: 100vw;
     font: normal 500 14pt helvetica, sans-serif;
+    background-color: #0288D1;
+    color: white;
 }
 
 html {
     height: 100vh;
     width: 100vh;
+}
+
+button {
+    background-color: #536DFE;
+    color: #212121;
 }
